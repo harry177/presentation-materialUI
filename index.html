@@ -1,40 +1,366 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-	<head>
-		<meta charset="utf-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
+    />
 
-		<title>reveal.js</title>
+    <title>reveal.js</title>
 
-		<link rel="stylesheet" href="dist/reset.css">
-		<link rel="stylesheet" href="dist/reveal.css">
-		<link rel="stylesheet" href="dist/theme/black.css">
+    <link rel="stylesheet" href="dist/reset.css" />
+    <link rel="stylesheet" href="dist/reveal.css" />
+    <link rel="stylesheet" href="dist/theme/white.css" />
 
-		<!-- Theme used for syntax highlighted code -->
-		<link rel="stylesheet" href="plugin/highlight/monokai.css">
-	</head>
-	<body>
-		<div class="reveal">
-			<div class="slides">
-				<section>Slide 1</section>
-				<section>Slide 2</section>
-			</div>
-		</div>
+    <!-- Theme used for syntax highlighted code -->
+    <link rel="stylesheet" href="plugin/highlight/custom-highlight.css" />
+    <link rel="stylesheet" href="css/custom.css" />
+  </head>
+  <body>
+    <div class="reveal">
+      <div class="slides">
+        <section data-transition="convex">
+          <img src="examples/assets/logo_raw.svg" class="main" />
+          <h1>Material UI</h1>
+        </section>
+        <section data-transition="convex">
+          <img
+            src="examples/assets/material-react.webp"
+            class="material-react"
+          />
+          <ul>
+            <li>Established by Google</li>
+            <li>A framework / library for React</li>
+            <li>Based on Metarial Design concept</li>
+            <li>Provided for free</li>
+          </ul>
+        </section>
+        <section data-transition="convex">
+          <h2>History</h2>
+          <p>
+            Material UI (MUI) was created in 2014 as a special kit for React to
+            unify React and Material Design. From the very beginning it offered
+            a huge veriety of styled components, from atomic, like simple
+            buttons, to more complex.
+          </p>
+          <p>
+            Now it is not only advanced and modern framework, but also a world
+            community of users and proponents of more then 4 million people.
+          </p>
+        </section>
+        <section>
+          <section data-transition="convex">
+            <h3>What is Material Design?..</h3>
+            <img src="examples/assets/MD-header.jpg" class="material-design" />
+            <ul class="material-design__text">
+              <li>
+                Material Design is a design system built and supported by Google
+                designers and developers. Material.io includes in-depth UX
+                guidance and UI component implementations for Android, Flutter,
+                and the Web.
+              </li>
+              <li>
+                The latest version, Material 3, enables personal, adaptive, and
+                expressive experiences – from dynamic color and enhanced
+                accessibility, to foundations for large screen layouts and
+                design tokens.
+              </li>
+            </ul>
+          </section>
+          <section>
+            <h3>Design of MD</h3>
+            <div class="md-container">
+              <div>
+                <ul class="material-design__text-bigger">
+                  <li>
+                    Styles: special choosen styles, that can be customized by
+                    changing Material theme.
+                  </li>
+                  <li>
+                    Adaptive design: means, that components can flixibly react
+                    on input from users and be adaptive for different devices.
+                  </li>
+                  <li>
+                    Provides Figma design kit: jumpstart designs with ready-made
+                    elements.
+                  </li>
+                </ul>
+              </div>
+              <div>
+                <img src="examples/assets/design-block.jpg" />
+              </div>
+            </div>
+          </section>
+          <section>
+            <img src="examples/assets/one-design.jpg" width="200%" height="200%" />
+          </section>
+        </section>
+        <section>
+          <h3>Material UI features</h3>
+          <ul>
+            <li>Interoperability with styling systems</li>
+            <li>Pre-built components</li>
+            <li>Customizable themes</li>
+          </ul>
+        </section>
+        <section>
+          <h3>Interoperability with styling systems</h3>
+          <div class="css-frameworks">
+            <img src="examples/assets/bootstrap-logo.png" class="frame" />
+            <img src="examples/assets/tailwind-logo.png" class="frame" />
+            <img src="examples/assets/foundation-logo.jpg" class="frame" />
+            <img src="examples/assets/skeleton-logo.webp" class="frame" />
+          </div>
+          <p>
+            One of the main advantages of Material UI is that it is
+            interoperable with different styling systems. This interoperability
+            means that developers can use the library with varying frameworks of
+            CSS or even with vanilla CSS.
+          </p>
+        </section>
+        <section>
+          <h3>Pre-built components</h3>
+          <p>Offering a set of pre-built components. For example:</p>
+          <ul>
+            <li>
+              Dialogs: can be used to confirm an action, or to provide
+              information about a process.
+            </li>
+            <li>
+              Icons: can be used to represent different actions, or to simply
+              add some flare to your design.
+            </li>
+            <li>
+              Grids: a powerful layout tool that can be used to create complex,
+              responsive layouts
+            </li>
+            <li>
+              Typography: is an important part of any project ( a variety of
+              options to help create beautiful, readable text)
+            </li>
+          </ul>
+        </section>
+        <section>
+          <section>
+            <h3>Customizable themes</h3>
+            <p>
+              With a few lines of code, it’s possible to create your own theme
+              or even customize individual components to get things looking just
+              the way you want.
+            </p>
+            <p>Look below:</p>
+            <pre><code data-trim data-noescape>
+					import { createMuiTheme } from '@material-ui/core/styles';
 
-		<script src="dist/reveal.js"></script>
-		<script src="plugin/notes/notes.js"></script>
-		<script src="plugin/markdown/markdown.js"></script>
-		<script src="plugin/highlight/highlight.js"></script>
-		<script>
-			// More info about initialization & config:
-			// - https://revealjs.com/initialization/
-			// - https://revealjs.com/config/
-			Reveal.initialize({
-				hash: true,
+					export default createMuiTheme({
+					  palette: {
+						primary: {
+						  main: '#ff4400',
+						},
+						secondary: {
+						  main: '#00bbff',
+						},
+					  },
+					});
+				</code></pre>
+          </section>
+          <section>
+            <h3>Customizable themes(2)</h3>
+            <p class="material-design__text">
+              Once you’ve exported your theme object, you can import it into
+              your application and use it by wrapping your root component in a
+              ThemeProvider component, like this:
+            </p>
+            <pre><code><script type="text/template">
+						import React from 'react';
+                        import { ThemeProvider } from '@material-ui/styles';
+                        import theme from './theme';
+​
+                        function App() {
+                          return (
+                            <ThemeProvider theme={theme}>
+                              <div>
+                                {/* your application code here */}
+                              </div>
+                            </ThemeProvider>
+                          );
+                        }
+                    </script></code></pre>
+            <p class="material-design__text">
+              It’s also possible to customize individual components without
+              having to create a whole new theme
+            </p>
+          </section>
+        </section>
+        <section>
+          <h3>Variants of usage</h3>
+          <p>According to official web-site, MUI can be used different ways:</p>
+          <ul class="material-design__text">
+            <li>
+              MUI Core: get access to a growing list of React-components -
+              ready-to-use and free forever.
+            </li>
+            <li>
+              MUI X: allows to build complex and data-rich applications using a
+              growing list of advanced React components.
+            </li>
+            <li>
+              Templates: a collection of 4.5 average rating templates, selected
+              and curated by MUI's team of maintainers.
+            </li>
+            <li>Design kits: allows to use prepared kits of components.</li>
+          </ul>
+        </section>
+        <section>
+          <section>
+            <h3>MUI kits and templates</h3>
+            <p>
+              Kits and templates aren`t free, but getting them means to have
+              complete instruments for rapid web-development
+            </p>
+            <div>
+              <img src="examples/assets/down-arrow.png" class="down-arrow" />
+            </div>
+          </section>
+          <section>
+            <h3>MUI kits</h3>
+            <img src="examples/assets/mui-kit.jpg" />
+          </section>
+          <section>
+            <h3>MUI templates</h3>
+            <img src="examples/assets/mui-templates.jpg" />
+          </section>
+        </section>
+        <section>
+          <h3>Installation</h3>
+          <p>Material-UI is available as an npm package.</p>
+          <p>To install and save in your package.json dependencies, run:</p>
+          <pre><code data-trim data-noescape>
+            // with npm
+            npm install @material-ui/core
 
-				// Learn about plugins: https://revealjs.com/plugins/
-				plugins: [ RevealMarkdown, RevealHighlight, RevealNotes ]
-			});
-		</script>
-	</body>
+            // with yarn
+            yarn add @material-ui/core
+          </code></pre>
+        </section>
+        <section>
+          <section>
+            <h3>Quickstart</h3>
+            <p class="material-design__text">
+              Here's a quick example to get started, it's literally what is
+              needed:
+            </p>
+            <pre><code><script type="text/template">
+              import React from 'react';
+              import ReactDOM from 'react-dom';
+              import Button from '@material-ui/core/Button';
+  
+              function App() {
+                return (
+                  <Button variant="contained" color="primary">
+                    Hello World
+                  </Button>
+                );
+              }
+  
+              ReactDOM.render(<App />, document.querySelector('#app'));
+            </script></code></pre>
+            <p class="material-design__text">
+              Material-UI components work in isolation. They are
+              self-supporting, and will only inject the styles they need to
+              display. They don't rely on any global style-sheets such as
+              normalize.css.
+            </p>
+          </section>
+          <section>
+            <h3>Result</h3>
+            <p>Actual result of the example, indicated above:</p>
+            <img src="examples/assets/example-result.jpg" />
+          </section>
+        </section>
+        <section>
+          <div class="header-center">
+            <h3>The Pros</h3>
+            <img src="examples/assets/green-plus.jpg" />
+          </div>
+          <ul class="material-design__text-bigger">
+            <li>
+              Material-UI is an excellent library for React that offers a wide
+              range of components and features.
+            </li>
+            <li>
+              It is easy to use and well-documented, making it an excellent
+              choice for developers of all experience levels.
+            </li>
+            <li>
+              Material-UI is constantly updated with new features and
+              improvements, making it a top choice for React developers in 2023.
+            </li>
+          </ul>
+        </section>
+        <section>
+          <section>
+            <div class="header-center">
+              <h3>The Cons</h3>
+              <img src="examples/assets/red-minus.jpg" />
+            </div>
+            <ul class="material-design__text-bigger">
+              <li>
+                A lack of customization options. If you want to change the look
+                and feel of your app, you’re out of luck.
+              </li>
+              <li>
+                Material-UI can be slow and buggy. There is reported slow
+                rendering times and issues with specific components, such as
+                buttons and inputs.
+              </li>
+              <li>
+                For some cases it becomes difficult for users to look at screens
+                that contain too much color; especially if they’re older or
+                color blind.
+              </li>
+            </ul>
+          </section>
+          <section>
+            <img src="examples/assets/customization.webp" />
+          </section>
+        </section>
+        <section>
+          <h3>Who is using Material UI</h3>
+          <p>
+            There are a lot of well-known successfull companies, using Material
+            UI
+          </p>
+          <p>
+            They strive to deliver an unrivaled experience for both developers
+            and users.
+          </p>
+          <div>
+            <img src="examples/assets/brand-pack.jpg" />
+          </div>
+        </section>
+        <section>
+          <h3>The end</h3>
+          <h3>Thank you for your attention!</h3>
+        </section>
+      </div>
+    </div>
+
+    <script src="dist/reveal.js"></script>
+    <script src="plugin/notes/notes.js"></script>
+    <script src="plugin/markdown/markdown.js"></script>
+    <script src="plugin/highlight/highlight.js"></script>
+    <script>
+      // More info about initialization & config:
+      // - https://revealjs.com/initialization/
+      // - https://revealjs.com/config/
+      Reveal.initialize({
+        hash: true,
+
+        // Learn about plugins: https://revealjs.com/plugins/
+        plugins: [RevealMarkdown, RevealHighlight, RevealNotes],
+      });
+    </script>
+  </body>
 </html>
